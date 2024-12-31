@@ -1,20 +1,24 @@
 import './App.css'
-import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
-import MyApp from "./components/MyApp.jsx";
-import { useState } from "react";
+import Header from "./components/Header/Header.jsx";
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Main from "./components/Main/Main.jsx";
 
 
 function App() {
-	const [count, setCount] = useState(0)
+
 
 	return (
-		<>
+		<div className="container-fluid">
 			<Header/>
-			<Main/>
-			<MyApp/>
-
-		</>
+			<div className="row">
+				<div className="col-3">
+					<Sidebar/>
+				</div>
+				<div className="col-9">
+					<Main/>
+				</div>
+			</div>
+		</div>
 	)
 }
 
